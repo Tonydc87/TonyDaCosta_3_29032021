@@ -1,0 +1,63 @@
+body{
+    width: 100%;
+    margin: 0px
+}
+
+header{
+    width: 100%;
+    border-bottom: solid 1px;
+    border-bottom-style: groove;
+    border
+}
+
+header img{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 10px auto;
+}
+
+.localisation_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+h1{
+    display: flex;
+    margin: auto;
+    width: 60%;
+    font-size: 20px;
+}
+
+.new, .serie{
+    width: 80%;
+    margin: auto;
+}
+
+.new img{
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-fit: cover;    
+}
+
+.serie img{
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-fit: cover;    
+}
+
+.intro_img img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;   
+}
+
+
+
+
+
