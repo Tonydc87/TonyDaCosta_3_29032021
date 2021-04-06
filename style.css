@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url(/police/Shrikhand-Regular.otf) format(truetype);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(/police/Roboto-Regular.ttf) format(truetype);
+}
+body {
+  margin: 0px;
+  font-family: "Roboto";
+}
+
+header {
+  font-family: "Shrikhand";
+  font-size: 13px;
+}
+header .title {
+  display: flex;
+  margin: 0px auto 5px;
+  padding-top: 10px;
+  justify-content: center;
+}
+
+.localisation_btn {
+  width: 100%;
+  background-color: #f0f0f0;
+  border-top-style: hidden;
+  border-collapse: collapse;
+  box-shadow: inset 5px 10px 5px -10px #a5a5a5;
+}
+.localisation_btn .form {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.localisation_btn .form #localisation {
+  border-style: hidden;
+  background-color: transparent;
+  margin-left: 5px;
+  padding: 10px 10px 10px 50px;
+  font-size: 11px;
+}
+
+.fa, .far, .fas {
+  position: absolute;
+  padding-left: 30px;
+  padding-top: 12px;
+  font-size: 10px;
+}
+
+.intro {
+  display: block;
+}
+.intro h2 {
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

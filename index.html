@@ -3,31 +3,31 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="page1" type="text/css" href="Alafrancaise.html">
-    <link rel="page2" type="text/css" href="lanoteenchantee.html">
-    <link rel="page3" type="text/css" href="lapalettedugout.html">
-    <link rel="page4" type="text/css" href="ledelicedessens.html">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://kit.fontawesome.com/9c6404a8df.js" crossorigin="anonymous"></script>
     <title>ohmyfood</title>
 </head>
 <body>
     <header>
-        <img src="C:\Users\tonyd\Documents\Projet3-Ohmyfood\logo\ohmyfood.png" alt="logo">
+        <h1 class="title">Ohmyfood</h1>
     </header>
+
     <div class="localisation_btn">
-        <i class="fas fa-search"></i> 
-        <button class="logo_search" type="submit"><span>Paris, Belleville</span> 
-        </button>
+        <form action="#" class="form">
+            <label class="logo_loc">
+                <i class="fas fa-map-marker-alt"></i>
+            </label>
+            <input type="search" id="localisation" name="blockrecherche" placeholder="Paris, Belleville"></input>
     </div>
+
     <div class="intro">
-        <h1>Réservez le menu qui vous convient</h1>
+        <h2>Réservez le menu qui vous convient</h2>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
         <button class="about" type="button"><span>Explorer nos restaurants</span></button>
     </div>
 
     <section id="performance">
-        <h2>Fonctionnement</h2>
+        <h3>Fonctionnement</h3>
         <nav>
             <ol>
                 <li><a href="#num1">Choisissez un restaurant</a></li>
@@ -40,26 +40,26 @@
     <section id="result">
         <article class="motion">
             <div class="new">
-                <img src="C:\Users\tonyd\Documents\Projet3-Ohmyfood\images\lapalettedugout.jpg" alt="restaurant la palette du gout">
-                <h3>La palette du goût</h3>
+                <img src="images/lapalettedugout.jpg" alt="restaurant la palette du gout">
+                <h4>La palette du goût</h4>
                 <p>Ménilmontant</p>
                 <i class=></i>
             </div>
             <div class="new">
-                <img src="C:\Users\tonyd\Documents\Projet3-Ohmyfood\images\lanoteenchantee.jpg" alt="restaurant la note enchantée">
-                <h3>La note enchantée</h3>
+                <img src="images/lanoteenchantee.jpg" alt="restaurant la note enchantée">
+                <h4>La note enchantée</h4>
                 <p>Charonne</p>
                 <i class=></i>
             </div>
             <div class="serie">
-                <img src="C:\Users\tonyd\Documents\Projet3-Ohmyfood\images\alafrancaise.jpg" alt="restaurant À la française">
-                <h3>À la française</h3>
+                <img src="images/alafrancaise.jpg" alt="restaurant À la française">
+                <h4>À la française</h4>
                 <p>Cité Rouge</p>
                 <i class=></i>
             </div>
             <div class="serie">
-            <img src="C:\Users\tonyd\Documents\Projet3-Ohmyfood\images\ledelicedessens.jpg" alt="restaurant Le délice des sens">
-                <h3>Le délice des sens</h3>
+            <img src="images/ledelicedessens.jpg" alt="restaurant Le délice des sens">
+                <h4>Le délice des sens</h4>
                 <p>Folie-Méricourt</p>
                 <i class=></i>
             </div>
@@ -67,7 +67,7 @@
     </section>
    
     <footer>
-        <h4>ohmyfood</h4>
+        <h3>ohmyfood</h3>
         <nav class="footer">
             <ul>
                 <li><a href="proposal">Proposer un restaurant</a></li>
