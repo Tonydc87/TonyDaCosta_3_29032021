@@ -1,6 +1,7 @@
 $primary-color:#9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$box-shadow: 2px 3px 2px rgb(211, 211, 211);
 
 
 @font-face {
@@ -31,9 +32,8 @@ header{
 
 .localisation_btn{
     width: 100%;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(228, 228, 228);
     border-top-style: hidden;
-    border-collapse: collapse;
     box-shadow: inset 5px 10px 5px -10px rgb(165, 165, 165);
            .form{
             display: flex;
@@ -43,8 +43,9 @@ header{
                     border-style: hidden;
                     background-color: transparent;
                     margin-left: 5px;
-                    padding: 10px 10px 10px 50px;
-                    font-size: 11px;
+                    padding: 10px 10px 10px 10px;
+                    font-size: 15px;
+                    text-align: center;
                    
                     }    
                 }
@@ -53,20 +54,152 @@ header{
 .fa, .far, .fas{
     position: absolute;
     padding-left: 30px;
-    padding-top: 12px;
-    font-size: 10px;
+    padding-top: 10px;
+    font-size: 15px;
 }
 
 .intro{
     display: block;
-    
+    margin: auto;
+    background-color: rgb(247, 244, 244);
+    padding-top: 20px;
+    padding-bottom: 50px;
         h2{
             display: flex;
-            font-size: 13px;
-            justify-content: center;
-            
+            font-size: 20px;
+            text-align: center;
+            justify-content: center;   
+            width: 70%;
+            margin: 30px auto 5px;     
     }
 }
+
+.intro p{
+    font-size: 15px;
+    text-align: center;
+    opacity: 0.70;
+}
+
+.btn_about{
+    display: flex;
+    justify-content: center;
+        .about{
+            font-size: 15px;
+            box-shadow: $box-shadow;
+            justify-content: center;
+            border-radius: 25px;
+            padding: 15px 20px;
+            border-style: hidden;
+            background-image: linear-gradient(to bottom, $secondary-color, $primary-color); 
+            color: white; 
+            cursor: pointer;   
+}
+}
+
+#performance h3{
+    margin-left: 10px;
+}
+
+.step{
+    background-color: rgb(248, 248, 248);
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    border-style: hidden;
+    border-radius: 25px ;
+    box-shadow: $box-shadow;
+    &:hover{
+        background-color: $primary-color;
+        }
+}
+
+ .step h4{
+        margin: auto;
+        padding: 20px 0px;    
+ }
+
+ .step i{
+     padding: 22px 10px 20px 0px;
+     margin-left: 20px;
+ }
+
+ .step span{
+     font-size: 12px;
+     background-color: $primary-color;
+     border-radius: 100%;
+     text-align: center;
+     height: 15px;
+     width: 15px;
+     color: white;
+     position: relative;
+     top: 22px;
+     left: -7px;    
+ }
+
+ #result{
+    display: inline-block;
+    background-color: rgb(247, 244, 244);
+    padding-top: 20px;
+    width: 100%;
+
+ }
+
+ .motion{
+    h4, p{
+        margin: 5px 0px 5px 10px;
+        font-size: 12px ;
+        }
+ }
+
+.new, .serie{
+    width: 90%;
+    margin: 0px auto 15px;
+    border-style: hidden;
+    box-shadow: $box-shadow;
+    border-radius: 25px;
+    padding-bottom: 5px;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 150px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+    }     
+}
+
+.new span{
+    display: flex;
+    position: absolute;
+    background-color: $tertiary-color;
+    border-style: hidden;
+    text-align: center;
+    opacity: 0.65;
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+        
+      
+    
+  
+
+    
+
+
+
+
+
+
+
+
 
 
 

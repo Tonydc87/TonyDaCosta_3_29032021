@@ -24,9 +24,8 @@ header .title {
 
 .localisation_btn {
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: #e4e4e4;
   border-top-style: hidden;
-  border-collapse: collapse;
   box-shadow: inset 5px 10px 5px -10px #a5a5a5;
 }
 .localisation_btn .form {
@@ -38,24 +37,131 @@ header .title {
   border-style: hidden;
   background-color: transparent;
   margin-left: 5px;
-  padding: 10px 10px 10px 50px;
-  font-size: 11px;
+  padding: 10px 10px 10px 10px;
+  font-size: 15px;
+  text-align: center;
 }
 
 .fa, .far, .fas {
   position: absolute;
   padding-left: 30px;
-  padding-top: 12px;
-  font-size: 10px;
+  padding-top: 10px;
+  font-size: 15px;
 }
 
 .intro {
   display: block;
+  margin: auto;
+  background-color: #f7f4f4;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 .intro h2 {
   display: flex;
-  font-size: 13px;
+  font-size: 20px;
+  text-align: center;
   justify-content: center;
+  width: 70%;
+  margin: 30px auto 5px;
+}
+
+.intro p {
+  font-size: 15px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.btn_about {
+  display: flex;
+  justify-content: center;
+}
+.btn_about .about {
+  font-size: 15px;
+  box-shadow: 2px 3px 2px lightgray;
+  justify-content: center;
+  border-radius: 25px;
+  padding: 15px 20px;
+  border-style: hidden;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  color: white;
+  cursor: pointer;
+}
+
+#performance h3 {
+  margin-left: 10px;
+}
+
+.step {
+  background-color: #f8f8f8;
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  border-style: hidden;
+  border-radius: 25px;
+  box-shadow: 2px 3px 2px lightgray;
+}
+.step:hover {
+  background-color: #9356DC;
+}
+
+.step h4 {
+  margin: auto;
+  padding: 20px 0px;
+}
+
+.step i {
+  padding: 22px 10px 20px 0px;
+  margin-left: 20px;
+}
+
+.step span {
+  font-size: 12px;
+  background-color: #9356DC;
+  border-radius: 100%;
+  text-align: center;
+  height: 15px;
+  width: 15px;
+  color: white;
+  position: relative;
+  top: 22px;
+  left: -7px;
+}
+
+#result {
+  display: inline-block;
+  background-color: #f7f4f4;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.motion h4, .motion p {
+  margin: 5px 0px 5px 10px;
+  font-size: 12px;
+}
+
+.new, .serie {
+  width: 90%;
+  margin: 0px auto 15px;
+  border-style: hidden;
+  box-shadow: 2px 3px 2px lightgray;
+  border-radius: 25px;
+  padding-bottom: 5px;
+}
+.new img, .serie img {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.new span {
+  display: flex;
+  position: absolute;
+  background-color: #99E2D0;
+  border-style: hidden;
+  text-align: center;
+  opacity: 0.65;
 }
 
 /*# sourceMappingURL=style.css.map */
