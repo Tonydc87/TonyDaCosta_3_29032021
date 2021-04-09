@@ -1,0 +1,30 @@
+        .loader{
+            font-family: "Shrikhand"; 
+            margin: auto;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: $footer-background;
+            color: white;
+            -webkit-animation: spin 5s linear infinite;
+            -o-animation: spin 5s linear infinite; 
+            animation: spin 5s linear infinite;
+        } 
+}
+
+@-webkit-keyframes spin{
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

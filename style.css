@@ -10,6 +10,9 @@ body {
   margin: 0px;
   font-family: "Roboto";
 }
+body .loader {
+  display: none;
+}
 
 header {
   font-family: "Shrikhand";
@@ -87,7 +90,7 @@ header .title {
   cursor: pointer;
 }
 
-#performance h3 {
+h3 {
   margin-left: 10px;
 }
 
@@ -146,6 +149,7 @@ header .title {
   box-shadow: 2px 3px 2px lightgray;
   border-radius: 25px;
   padding-bottom: 5px;
+  cursor: pointer;
 }
 .new img, .serie img {
   object-fit: cover;
@@ -156,12 +160,48 @@ header .title {
 }
 
 .new span {
+  color: #4e6b64;
   display: flex;
+  font-size: 12px;
+  padding: 5px;
+  margin-top: 10px;
   position: absolute;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   border-style: hidden;
   text-align: center;
-  opacity: 0.65;
+  opacity: 0.8;
+  right: 30px;
+}
+
+.motion i {
+  position: absolute;
+  display: flex;
+  right: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.motion i:active {
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 10px 0px;
+}
+footer h3 {
+  font-family: "Shrikhand";
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+footer li {
+  list-style: none;
+}
+footer li a {
+  font-size: 10px;
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
