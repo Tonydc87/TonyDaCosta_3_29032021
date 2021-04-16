@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Shrikhand";
-  src: url(/police/Shrikhand-Regular.otf) format(truetype);
+  src: url(police/Shrikhand-Regular.otf) format(truetype);
 }
 @font-face {
   font-family: "Roboto";
-  src: url(/police/Roboto-Regular.ttf) format(truetype);
+  src: url(police/Roboto-Regular.ttf) format(truetype);
 }
 body {
   margin: 0px;
@@ -50,6 +50,11 @@ header .title {
   padding-left: 30px;
   padding-top: 10px;
   font-size: 15px;
+  background-size: cover;
+}
+.fa .fa-gradient:active, .far .fa-gradient:active, .fas .fa-gradient:active {
+  background-color: linear-gradient(to bottom, #FF79DA, #9356DC);
+  transform-origin: bottom;
 }
 
 .intro {
@@ -89,6 +94,10 @@ header .title {
   color: white;
   cursor: pointer;
 }
+.btn_about .about:hover {
+  transition: 0.5s;
+  opacity: 0.8;
+}
 
 h3 {
   margin-left: 10px;
@@ -104,7 +113,8 @@ h3 {
   box-shadow: 2px 3px 2px lightgray;
 }
 .step:hover {
-  background-color: #9356DC;
+  background-color: #E4D5F6;
+  transition: 0.5s;
 }
 
 .step h4 {
@@ -115,6 +125,10 @@ h3 {
 .step i {
   padding: 22px 10px 20px 0px;
   margin-left: 20px;
+  color: #706f6f;
+}
+.step i:hover {
+  color: #9356DC;
 }
 
 .step span {
@@ -143,9 +157,12 @@ h3 {
 }
 
 .new, .serie {
+  display: block;
+  position: relative;
   width: 90%;
   margin: 0px auto 15px;
   border-style: hidden;
+  overflow: hidden;
   box-shadow: 2px 3px 2px lightgray;
   border-radius: 25px;
   padding-bottom: 5px;
@@ -161,7 +178,7 @@ h3 {
 
 .new span {
   color: #4e6b64;
-  display: flex;
+  display: block;
   font-size: 12px;
   padding: 5px;
   margin-top: 10px;
@@ -169,16 +186,20 @@ h3 {
   background-color: #99e2d0;
   border-style: hidden;
   text-align: center;
-  opacity: 0.8;
-  right: 30px;
+  right: 10px;
+  top: 10px;
 }
 
 .motion i {
   position: absolute;
   display: flex;
+  padding: 0px;
+  margin-top: 10px;
   right: 30px;
-  font-size: 15px;
+  font-size: 17px;
   cursor: pointer;
+  transition: transform 4s;
+  background-size: cover;
 }
 .motion i:active {
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
@@ -192,16 +213,38 @@ footer {
 footer h3 {
   font-family: "Shrikhand";
   font-weight: lighter;
-  font-size: 15px;
+  font-size: 25px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+
+footer ul {
+  padding-left: 25px;
+  display: inline-block;
 }
 
 footer li {
+  display: block;
   list-style: none;
 }
 footer li a {
-  font-size: 10px;
+  font-size: 14px;
+  padding-left: 0px;
   text-decoration: none;
   color: white;
 }
+
+.foot_1, .foot_2 {
+  display: flex;
+}
+.foot_1 i, .foot_2 i {
+  position: relative;
+  padding: 0px;
+}
+
+.foot_1 a {
+  margin-left: 7px;
+}
+
 
 /*# sourceMappingURL=style.css.map */
