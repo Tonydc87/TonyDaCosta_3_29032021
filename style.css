@@ -25,6 +25,7 @@ header .title {
   justify-content: center;
 }
 
+/*----- homepage -----*/
 .localisation_btn {
   width: 100%;
   background-color: #e4e4e4;
@@ -205,6 +206,62 @@ h3 {
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
 }
 
+/*----- page1 -----*/
+.intro_img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+.intro_img img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.menu {
+  position: relative;
+  background-color: #f6f6f6;
+  margin-top: -20px;
+  padding-top: 10px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.menu h1 {
+  font-family: "Shrikhand";
+  padding-left: 20px;
+}
+
+.menu h2 {
+  font-weight: lighter;
+  font-size: 15px;
+  margin-left: 20px;
+  padding-bottom: 5px;
+  width: 9%;
+  border-bottom: solid #99e2d0;
+}
+
+.menu i {
+  position: absolute;
+  top: 22px;
+  right: 25px;
+  font-size: 20px;
+}
+
+.ent_1, .ent_2, .ent_3, .meal_1,
+.meal_2, .meal_3, .dess_1, .dess_2, .dess_3 {
+  background-color: white;
+  border-style: hidden;
+  border-radius: 25px;
+  box-shadow: 2px 3px 2px lightgray;
+  margin: 10px auto;
+  width: 90%;
+}
+.ent_1 h3, .ent_2 h3, .ent_3 h3, .meal_1 h3,
+.meal_2 h3, .meal_3 h3, .dess_1 h3, .dess_2 h3, .dess_3 h3 {
+  font-size: 15px;
+}
+
+/*----- footer -----*/
 footer {
   background-color: #353535;
   color: white;
@@ -245,6 +302,5 @@ footer li a {
 .foot_1 a {
   margin-left: 7px;
 }
-
 
 /*# sourceMappingURL=style.css.map */
