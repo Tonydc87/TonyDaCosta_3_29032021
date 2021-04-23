@@ -13,21 +13,92 @@
 body{
     margin:0px;
     font-family: "Roboto";
-     .loader{
-         display: none;
-     }
+     
 }
 
 
-header{
-    font-family: "Shrikhand"; 
-    font-size: 13px;
-        .title{
-            display: flex;
-            margin: 0px auto 5px;
-            padding-top: 10px;
-            justify-content: center;          
+.headerlogo{
+    display: block;
+    text-align: center;
+    padding: 15px 0px 5px;
+        img{
+            width: 190px;
+            height: 32px;
         }
+        
+}
+
+.loading {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: justify;
+}
+
+.spinner {
+    cursor: progress;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  	-webkit-animation: seconds 1.0s forwards;
+  	-webkit-animation-iteration-count: 1;
+  	-webkit-animation-delay: 5s;
+  	animation: seconds 1.0s forwards;
+  	animation-iteration-count: 1;
+  	animation-delay: 5s;
+  	position: relative;
+}
+
+.spinner:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    overflow: hidden;
+    background: #FF79DA;
+    opacity: 0.6;
+}
+.spinner:after {
+    box-sizing: border-box;
+    z-index: 10002;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    border: 3px solid #621267;
+    border-top: 3px solid #FF79DA;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: custom-loading 1s linear infinite;
+}
+
+@keyframes custom-loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -9999px; 
+  }
+}
+@keyframes seconds 
+{
+  0% {
+  	opacity: 1;
+	}
+  100% {
+  	opacity: 0;
+    left: -9999px;
+	}
 }
 
 /*----- homepage -----*/
@@ -104,7 +175,7 @@ header{
                 transition: 0.5s;
                 opacity: 0.8; 
             } 
-}
+        }
 }
 
 h3{
@@ -215,69 +286,114 @@ h3{
         }  
 }
 
-/*----- page1 -----*/
 
+
+/*----- page1 -----*/
+.return_button{
+    position: absolute;
+    top: 12px;
+    left: -10px;  
+    color: black;
+}
 .intro_img{
-    display: block;
     width: 100%;
-    height: 300px;
+    height: 200px;
         img{
-            
             object-fit: cover;
             width: 100%;
             height: 300px;
         }
 }
 
-.menu{
-    position: relative;
+.menu_restaurant{
+    display: inline-block;
+    width: 100%;
     background-color:#f6f6f6;
-    margin-top: -20px;
-    padding-top: 10px;
+    margin-top: 30px;
+    padding-top: 15px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
         h1{
             font-family: "Shrikhand";
-            padding-left: 20px;       
+            font-size: 25px;
+            padding-left: 20px; 
         }
 }
+.menu_title{
+    display: inline-block;
+    position: relative;
+        .anim_heart{
+            position: absolute;
+            top : 10px;
+            right: 15px;
+                i{
+                    font-size: 20px;
+            }          
+        }       
+    }
 
-.menu h2{
-    font-weight: lighter;
-    font-size: 15px;
-    margin-left: 20px;
-    padding-bottom: 5px;
-    width: 9%;
-    border-bottom: solid $tertiary-color;
 
+
+.menu_ent, .menu_meal, .menu_dessert{
+    width: 100%;
+    padding-bottom: 20px;
+        h2{
+            font-weight: lighter;
+            font-size: 15px;
+            margin-left: 20px;
+            padding-bottom: 10px;
+            width: fit-content;
+            border-bottom: solid $tertiary-color;
+                
+}
 }
 
-.menu i{
-    position: absolute;
-    top: 22px;
-    right: 25px;
-    font-size: 20px; 
-}
+
 
 .ent_1, .ent_2, .ent_3, .meal_1,
 .meal_2, .meal_3, .dess_1, .dess_2, .dess_3{
+    
     background-color: white;
     border-style: hidden;
     border-radius: 25px;
     box-shadow: $box-shadow;
     margin: 10px auto;
     width: 90%;
-        h3{
-            font-size: 15px;
+    h3{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+.descript_rate{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+        span{
+           
+        
         }
 }
 
-
-
-
-
-
-
+.menu button{
+    display: flex;
+    margin: 20px auto;
+    font-size: 15px;
+    box-shadow: $box-shadow;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 15px 20px;
+    border-style: hidden;
+    background-image:$color-gradient;
+    color: white; 
+    cursor: pointer;  
+        &:hover{
+            transition: 0.5s;
+            opacity: 0.8; 
+        } 
+}
 
 /*----- footer -----*/
 
@@ -321,6 +437,18 @@ footer li{
  .foot_1 a{
      margin-left: 7px;
  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
