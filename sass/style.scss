@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'Shrikhand';
-    src: url(police/Shrikhand-Regular.otf) format(truetype);
+    src: url(police/Shrikhand-Regular.otf) format("truetype");
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url(police/Roboto-Regular.ttf) format(truetype);
+    src: url(police/Roboto-Regular.ttf) format("truetype");
 }
 
 body{
@@ -29,65 +29,66 @@ body{
 }
 
 .loading {
-    display: none;
+    display: block;
     width: 100%;
-    margin: 0 auto;
-    position: relative;
-    text-align: justify;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+        h1{
+            font-family: 'Shrikhand';
+        }
 }
 
 .spinner {
     cursor: progress;
-    position: absolute;
     width: 100%;
     height: 100%;
-  	-webkit-animation: seconds 1.0s forwards;
+  	-webkit-animation: seconds 2.0s forwards;
   	-webkit-animation-iteration-count: 1;
-  	-webkit-animation-delay: 5s;
+  	-webkit-animation-delay: 3s;
   	animation: seconds 1.0s forwards;
   	animation-iteration-count: 1;
-  	animation-delay: 5s;
-  	position: relative;
+  	animation-delay: 3s;
+  	position: absolute;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: 100%;
+        z-index: 10001;
+        overflow: auto;  
+    }
+        &:after {
+            box-sizing: border-box;
+            z-index: 10002;
+            content: "";
+            position: fixed;
+            top: 35px;
+            left: 85px;
+            border: 10px solid $footer-background;
+            border-top: 10px solid $tertiary-color;
+            border-bottom: 10px solid $secondary-color;
+            border-radius:50%;
+            width: 200px;
+            height: 200px;
+            animation: spinner 1s linear infinite;
+        }
+
 }
 
-.spinner:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10001;
-    overflow: hidden;
-    background: #FF79DA;
-    opacity: 0.6;
-}
-.spinner:after {
-    box-sizing: border-box;
-    z-index: 10002;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px;
-    border: 3px solid #621267;
-    border-top: 3px solid #FF79DA;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: custom-loading 1s linear infinite;
-}
-
-@keyframes custom-loading {
+@keyframes spinner {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
 @-webkit-keyframes seconds {
   0% {
-    opacity: 1;
+    opacity: 0.5;
   }
+  
   100% {
-    opacity: 0;
-    left: -9999px; 
+    opacity: 0; 
   }
 }
 @keyframes seconds 
@@ -97,7 +98,6 @@ body{
 	}
   100% {
   	opacity: 0;
-    left: -9999px;
 	}
 }
 
@@ -123,25 +123,12 @@ body{
                 }
 }
 
-.fa, .far, .fas{
-    position: absolute;
-    padding-left: 30px;
-    padding-top: 10px;
-    font-size: 15px;
-    background-size: cover;
-        .fa-gradient:active{
-            background-color: $color-gradient;
-            transform-origin: bottom;
-            
-        }
-}
-
 .intro{
     display: block;
     margin: auto;
     background-color: rgb(247, 244, 244);
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
         h2{
             display: flex;
             font-size: 20px;
@@ -152,16 +139,23 @@ body{
     }
 }
 
+.logo_loc i{
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 30px;
+
+}
+
 .intro p{
     font-size: 15px;
     text-align: center;
     opacity: 0.70;
 }
 
-.btn_about{
+.btn_about, .btn_buy{
     display: flex;
     justify-content: center;
-        .about{
+        .about, .buy{
             font-size: 15px;
             box-shadow: $box-shadow;
             justify-content: center;
@@ -176,6 +170,10 @@ body{
                 opacity: 0.8; 
             } 
         }
+}
+
+.btn_about{
+    padding-top: 10px;
 }
 
 h3{
@@ -281,19 +279,17 @@ h3{
     cursor: pointer;
     transition: transform 4s;
     background-size: cover;
-        &:active{
-            background-image: $color-gradient;
-        }  
 }
 
 
 
-/*----- page1 -----*/
-.return_button{
+/*----- pages_restaurant -----*/
+.return_button i{
     position: absolute;
-    top: 12px;
-    left: -10px;  
+    top: 20px;
+    left: 15px; 
     color: black;
+    border-style: solid black ;
 }
 .intro_img{
     width: 100%;
@@ -319,38 +315,127 @@ h3{
             padding-left: 20px; 
         }
 }
+
+/*----- animation remplissage du coeur -----*/
+
 .menu_title{
     display: inline-block;
     position: relative;
+    width: 100%;
         .anim_heart{
             position: absolute;
-            top : 10px;
-            right: 15px;
+            top : 25px;
+            right: 25px;
                 i{
                     font-size: 20px;
             }          
         }       
     }
 
+.anim_heart_gradient{
+    display: none;
+    color: $secondary-color;
+    font-size: 20px; 
+    position: absolute;
+    top : 25px;
+    right: 25px; 
+        i:active{  
+        display: flex;  
+        animation-delay: heart 3s;
+        animation-name: heart ease-in 3s;
+    }
+}
+
+    @keyframes heart{
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @-moz-keyframes heart{ /* sur Firefox */
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @-webkit-keyframes heart{ /* sur Safari et Chrome */
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @-o-keyframes heart{ /* sur Opera */
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+
+
 
 
 .menu_ent, .menu_meal, .menu_dessert{
     width: 100%;
     padding-bottom: 20px;
-        h2{
-            font-weight: lighter;
-            font-size: 15px;
-            margin-left: 20px;
-            padding-bottom: 10px;
-            width: fit-content;
-            border-bottom: solid $tertiary-color;
-                
+    animation-delay: appear 3s;
+    -moz-animation: appear 3s; /* Firefox */
+    -webkit-animation: appear 3s; /* Safari et Chrome */
+            h2{
+                font-weight: lighter;
+                font-size: 15px;
+                margin-left: 20px;
+                padding-bottom: 10px;
+                width: fit-content;
+                border-bottom: solid $tertiary-color;         
+    }
 }
+
+@keyframes appear {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@-moz-keyframes appear { /* sur Firefox */
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes appear { /* sur Safari et Chrome */
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.menu_dessert{
+    padding-bottom: 0px;
 }
 
-
-
-.ent_1, .ent_2, .ent_3, .meal_1,
+.ent_1, .ent_2, .ent_3, .ent_4, .meal_1,
 .meal_2, .meal_3, .dess_1, .dess_2, .dess_3{
     
     background-color: white;
@@ -361,7 +446,8 @@ h3{
     width: 90%;
     h3{
         font-size: 15px;
-        margin-bottom: 10px;
+        margin: 0px;
+        padding: 10px 0px 0px 10px;
     }
 }
 
@@ -372,71 +458,64 @@ h3{
     margin-top: 0px;
     margin-bottom: 0px;
         span{
-           
-        
+           align-self: baseline;
+           padding-top: 10px;
+           padding-right: 10px;
         }
+            p{
+                padding-left: 10px;
+            }
+
 }
 
-.menu button{
-    display: flex;
-    margin: 20px auto;
-    font-size: 15px;
-    box-shadow: $box-shadow;
-    justify-content: center;
-    border-radius: 25px;
-    padding: 15px 20px;
-    border-style: hidden;
-    background-image:$color-gradient;
-    color: white; 
-    cursor: pointer;  
-        &:hover{
-            transition: 0.5s;
-            opacity: 0.8; 
-        } 
+.btn_buy{
+    margin: 20px;
 }
 
 /*----- footer -----*/
 
 footer{
     background-color: $footer-background;
-    color: white;
     padding: 10px 0px;
      h3{
+        color: white;
         font-family: "Shrikhand";
         font-weight: lighter;
         font-size: 25px;
         margin-left: 20px;
         margin-bottom: 0px;
      }
-}
-
-footer ul{
-    padding-left: 25px;
-    display: inline-block;
-}
-
-footer li{
-    display: block;
-    list-style: none;
-        a{
-        font-size: 14px;
-        padding-left: 0px;
-        text-decoration: none;
-        color: white;    
+        ul{
+            padding-left: 20px;
         }
+            li{
+            list-style: none;
+            font-size: 14px;
+            padding-left: 0px;
+                a{
+            text-decoration: none;
+            color: white; 
+            }
+    }
 }
 
- .foot_1, .foot_2{
-     display: flex;
+.foot_log1, .foot_log2{
+    display: flex;
         i{
-            position: relative;
-            padding: 0px;
+           color: white; 
         }
- }
+}
+.foot_log1 a{
+    margin-left: 6px;
+}
 
- .foot_1 a{
-     margin-left: 7px;
- }
+
+
+
+    
+ 
+
+
 
 
 
