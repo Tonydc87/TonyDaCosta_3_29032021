@@ -86,27 +86,32 @@ body{
     100% { transform: rotate(360deg); }
 }
 
-@-webkit-keyframes time {
-  0% {
-    opacity: 1;
-    left: -9999px;
-  }
-  
-  100% {
-    opacity: 0;
-    left: -9999px; 
-  }
-}
 @keyframes time {
-  0% {
-  	opacity: 1;
+    0% {
+        opacity: 1;
+      }
+
+    90% {
+        opacity: 0;
+    }
+    100% {
       left: -9999px;
-	}
-  100% {
-  	opacity: 0;
-    left: -9999px;
-	}
-}
+      }
+  }
+
+@-webkit-keyframes time {
+    0% {
+        opacity: 1;
+      }
+    
+    90% {
+        opacity: 0;
+    }
+    100% {
+      left: -9999px;
+      }
+  }
+
 
 /*----- homepage -----*/
 
@@ -290,6 +295,7 @@ h3{
 
 
 /*----- pages_restaurant -----*/
+
 .return_button i{
     position: absolute;
     top: 20px;
@@ -297,6 +303,7 @@ h3{
     color: black;
     border-style: solid black ;
 }
+
 .intro_img{
     width: 100%;
     height: 200px;
@@ -327,74 +334,127 @@ h3{
 .menu_title{
     display: inline-block;
     position: relative;
-    width: 100%;
+    width: 100%;     
         .anim_heart{
+            display: inline-block;
+            font-size: 20px; 
             position: absolute;
             top : 25px;
-            right: 25px;
-                i{
-                    font-size: 20px;
-            }          
-        }       
-    }
+            right: 25px; 
+                i:hover{   
+                    animation-delay: heart1 3s;
+                    animation-name: heart1  3s;
+                    -moz-animation: heart1  3s; /* Firefox */
+                    -webkit-animation: heart1  3s; /* Safari et Chrome */
+                }
+            }
+        }
 
+    @keyframes heart1{
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(0); 
+            
+        }
+    }
+    @-moz-keyframes heart1{ /* sur Firefox */
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(0); 
+            
+        }
+    }
+    @-webkit-keyframes heart1{ /* sur Safari et Chrome */
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(0); 
+            
+        }
+    }
+    @-o-keyframes heart1{ /* sur Opera */
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1); 
+            
+        }
+    }
+ 
 .anim_heart_gradient{
-    display: none;
-    color: $secondary-color;
-    font-size: 20px; 
-    position: absolute;
-    top : 25px;
-    right: 25px; 
-        i:active{  
-        display: flex;  
-        animation-delay: heart 3s;
-        animation-name: heart ease-in 3s;
-    }
-}
+        display: inline-block;
+        font-size: 20px; 
+        position: absolute;
+        top : 25px;
+        right: 25px;
+        color: red;
+            i:active{
+                animation-delay: heart2 forwards 3s;
+                animation-name: heart2 forwards  3s;
+                -moz-animation: heart2 forwards 3s; /* Firefox */
+                -webkit-animation: heart2 forwards 3s; /* Safari et Chrome */
+                visibility: visible;
+                    &::before{
+                        visibility: visible;
+                        &:after{
+                            visibility: hidden;
+                        }
+                    }
+            }
+     }
 
-    @keyframes heart{
+     @keyframes heart2{
         from {
-            opacity: 0;
+            transform: scale(0);
         }
         to {
-            opacity: 1;
+            transform: scale(1); 
+            
         }
     }
-    @-moz-keyframes heart{ /* sur Firefox */
+    @-moz-keyframes heart2{ /* sur Firefox */
         from {
-            opacity: 0;
+            transform: scale(0);
         }
         to {
-            opacity: 1;
+            transform: scale(1); 
+            
         }
     }
-    @-webkit-keyframes heart{ /* sur Safari et Chrome */
+    @-webkit-keyframes heart2{ /* sur Safari et Chrome */
         from {
-            opacity: 0;
+            transform: scale(0);
         }
         to {
-            opacity: 1;
+            transform: scale(1); 
+            
         }
     }
-    @-o-keyframes heart{ /* sur Opera */
+    @-o-keyframes heart2{ /* sur Opera */
         from {
-            opacity: 0;
+            transform: scale(0);
         }
         to {
-            opacity: 1;
+            transform: scale(1); 
         }
     }
 
 
 
 
+
+
+/*-----Animation entré sur la page des restaurants-----*/
 
 .menu_ent, .menu_meal, .menu_dessert{
     width: 100%;
     padding-bottom: 20px;
-    animation-delay: appear 3s;
-    -moz-animation: appear 3s; /* Firefox */
-    -webkit-animation: appear 3s; /* Safari et Chrome */
             h2{
                 font-weight: lighter;
                 font-size: 15px;
@@ -404,10 +464,28 @@ h3{
                 border-bottom: solid $tertiary-color;         
     }
 }
+ .menu_ent{
+    animation-delay: appear 3s;
+    -moz-animation: appear 3s; /* Firefox */
+    -webkit-animation: appear 3s; /* Safari et Chrome */
+ }
+
+ .menu_meal{
+    animation-delay: appear 4s;
+    -moz-animation: appear 4s; /* Firefox */
+    -webkit-animation: appear 4s; /* Safari et Chrome */
+ }
+
+ .menu_dessert{
+    animation-delay: appear 5s;
+    -moz-animation: appear 5s; /* Firefox */
+    -webkit-animation: appear 5s; /* Safari et Chrome */
+ }
+
 
 @keyframes appear {
     from {
-        transform: scale(0);
+        transform: scale(0);    
     }
     to {
         transform: scale(1);
@@ -429,7 +507,7 @@ h3{
         transform: scale(1);
     }
 }
-@-o-keyframes fadein { /* sur Opera */
+@-o-keyframes appear { /* sur Opera */
     from {
         transform: scale(0);
     }
@@ -437,13 +515,17 @@ h3{
         transform: scale(1);
     }
 }
+
+/*---------------------FIN-----------------------*/
+
 .menu_dessert{
     padding-bottom: 0px;
 }
 
 .ent_1, .ent_2, .ent_3, .ent_4, .meal_1,
 .meal_2, .meal_3, .dess_1, .dess_2, .dess_3{
-    
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-style: hidden;
     border-radius: 25px;
@@ -451,6 +533,7 @@ h3{
     margin: 10px auto;
     width: 90%;
     h3{
+        width: fit-content;
         font-size: 15px;
         margin: 0px;
         padding: 10px 0px 0px 10px;
@@ -476,6 +559,29 @@ h3{
 
 .btn_buy{
     margin: 20px;
+}
+
+/*-----Animation selection des plats-----*/
+
+.check{
+    position: absolute;
+    display: none;
+    right: 15px;
+    width: 15%;
+    height:40px;
+    cursor: pointer;
+    padding: 0px;
+    background-size: cover;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: $tertiary-color;
+        i{
+            display: flex;
+            font-size: 20px;
+            color: white;
+            margin: auto;
+            justify-content: center;
+        }
 }
 
 /*----- footer -----*/
