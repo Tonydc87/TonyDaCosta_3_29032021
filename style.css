@@ -36,7 +36,7 @@ body {
   position: relative;
   font-family: "Shrikhand";
   text-align: center;
-  top: 48%;
+  top: 45%;
   margin-left: 0.8em;
 }
 
@@ -235,7 +235,7 @@ h3 {
   font-size: 12px;
 }
 
-.new, .serie {
+.new1, .new2, .serie1, .serie2 {
   display: block;
   position: relative;
   width: 90%;
@@ -247,7 +247,7 @@ h3 {
   padding-bottom: 5px;
   cursor: pointer;
 }
-.new img, .serie img {
+.new1 img, .new2 img, .serie1 img, .serie2 img {
   object-fit: cover;
   width: 100%;
   height: 150px;
@@ -255,7 +255,7 @@ h3 {
   border-top-right-radius: 25px;
 }
 
-.new span {
+.new1 span, .new2 span {
   color: #4e6b64;
   display: block;
   font-size: 12px;
@@ -425,6 +425,7 @@ h3 {
 }
 
 .ent_1 {
+  animation: underline;
   animation-delay: appear 1s;
   -moz-animation: appear 1s;
   /* Firefox */
@@ -598,161 +599,83 @@ h3 {
 /*-----Animation selection des plats-----*/
 .check {
   position: absolute;
-  display: block;
+  display: inline-flex;
+  z-index: 10002;
   right: 0px;
   top: 0px;
   height: 66px;
-  width: 15%;
+  width: 20%;
+  content: "";
   cursor: pointer;
   padding: 0px;
-  background-size: cover;
-  opacity: 0;
+  opacity: 0.05;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   background-color: #99e2d0;
-  animation-delay: underline 2s;
-  -moz-animation: underline 2s;
-  /* Firefox */
-  -webkit-animation: underline 2s;
-  /* Safari et Chrome */
 }
 .check:hover {
+  animation: underline 0.5s;
+  animation-delay: underline 0.5s;
+  -moz-animation: underline 0.5s;
+  /* Firefox */
+  -webkit-animation: underline 0.5s;
+  /* Safari et Chrome */
   opacity: 1;
-  transition: 0.5s;
 }
 .check i {
   display: flex;
+  content: "";
   font-size: 35px;
+  width: 15%;
+  height: 66px;
   color: white;
   margin: auto;
   padding-top: 15px;
   justify-content: center;
-  animation: rotate-check 1s;
-  animation-delay: rotate-check 1s;
-  -moz-animation: rotate-check 1s;
-  /* Firefox */
-  -webkit-animation: rotate-check 1s;
-  /* Safari et Chrome */
 }
 .check i:hover {
-  animation: rotate-check 1s linear;
-  animation-iteration-count: 3;
+  animation: spinner 1s linear;
 }
 
 .rate {
-  position: relative;
-  padding-right: 10px;
-  animation: mouve left 3s;
-  animation-delay: mouve left 3s;
-  -moz-animation: mouve left 3s;
-  /* Firefox */
-  -webkit-animation: mouve left 3s;
-  /* Safari et Chrome */
+  position: absolute;
+  right: 0px;
+  padding-right: 21%;
 }
 
-@keyframes mouve {
-  from {
-    right: 0%;
-  }
-  to {
-    right: 20%;
-  }
-}
-@-moz-keyframes mouve {
-  /* sur Firefox */
-  from {
-    right: 0%;
-  }
-  to {
-    left: 20%;
-  }
-}
-@-webkit-keyframes mouve {
-  /* sur Safari et Chrome */
-  from {
-    right: 0%;
-  }
-  to {
-    left: 20%;
-  }
-}
-@-o-keyframes mouve {
-  /* sur Opera */
-  from {
-    right: 0%;
-  }
-  to {
-    left: 20%;
-  }
-}
 @keyframes underline {
   from {
-    right: 0%;
+    opacity: 0;
   }
   to {
-    left: 10%;
+    opacity: 1;
   }
 }
 @-moz-keyframes underline {
   /* sur Firefox */
   from {
-    right: 0%;
+    opacity: 0;
   }
   to {
-    left: 10%;
+    opacity: 1;
   }
 }
 @-webkit-keyframes underline {
   /* sur Safari et Chrome */
   from {
-    right: 0%;
+    opacity: 0;
   }
   to {
-    left: 10%;
+    opacity: 1;
   }
 }
 @-o-keyframes underline {
   /* sur Opera */
   from {
-    right: 0%;
+    opacity: 0;
   }
   to {
-    left: 10%;
-  }
-}
-@keyframes rotate-check {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-moz-keyframes rotate-check {
-  /* sur Firefox */
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes rotate-check {
-  /* sur Safari et Chrome */
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-o-keyframes rotate-check {
-  /* sur Opera */
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
 /*----- footer -----*/
@@ -790,6 +713,41 @@ footer li a {
 
 .foot_log1 a {
   margin-left: 6px;
+}
+
+/*-----mediaQ-----*/
+@media screen and (min-width: 800px) {
+  h3 {
+    text-align: center;
+  }
+
+  .step {
+    width: 50%;
+  }
+
+  .new, .serie {
+    display: flex;
+    width: 100%;
+  }
+
+  .new1, .new2, .serie1, .serie2 {
+    width: 80%;
+    margin: 10px;
+  }
+
+  footer h3 {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .new1, .new2, .serie1, .serie2 {
+    width: 80%;
+    height: 250px;
+    margin: 10px;
+  }
+  .new1 img, .new2 img, .serie1 img, .serie2 img {
+    height: 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
