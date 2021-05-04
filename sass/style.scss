@@ -280,17 +280,34 @@ h3{
     top: 10px;
 }
 
-.motion i{
+.fa-empty{
     position: absolute;
     display: flex;
     padding: 0px;
-    margin-top: 10px;
-    right: 30px; 
+    right: 15px; 
+    bottom: 10px;
     font-size: 17px;
     cursor: pointer;
+    z-index: 10002;
+    background-color: #F8F4F3;
     transition: transform 4s;
     background-size: cover;
 }
+
+.fa-color{
+    position: absolute;
+    display: flex;
+    padding: 0px;
+    right: 15px; 
+    bottom: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    color: red;
+    z-index: 10001;
+    background-size: cover;    
+}
+
+
 
 
 
@@ -313,9 +330,40 @@ h3{
             height: 300px;
         }
 }
+.fa-white{
+    position: absolute;
+    display: flex;
+    padding: 0px;
+    margin-top: 10px;
+    right: 30px;
+    top: 30px; 
+    font-size: 17px;
+    cursor: pointer;
+    z-index: 10002;
+    background-color: #F8F4F3;
+    transition: transform 4s;
+    
+}
+
+.fa-red{
+    position: absolute;
+    display: flex;
+    padding: 0px;
+    height: 15px;
+    margin-top: 10px;
+    right: 30px; 
+    top: 30px; 
+    bottom: 0px;
+    font-size: 17px;
+    cursor: pointer;
+    color: red;
+    z-index: 10001;
+    background-size: cover;    
+}
 
 .menu_restaurant{
     display: inline-block;
+    position: relative;
     width: 100%;
     background-color:#f6f6f6;
     margin-top: 30px;
@@ -331,119 +379,54 @@ h3{
 
 /*----- animation remplissage du coeur -----*/
 
-.menu_title{
-    display: inline-block;
-    position: relative;
-    width: 100%;     
-        .anim_heart{
-            display: inline-block;
-            font-size: 20px; 
-            position: absolute;
-            top : 25px;
-            right: 25px; 
-                i:hover{   
-                    animation-delay: heart1 3s;
-                    animation-name: heart1  3s;
-                    -moz-animation: heart1  3s; /* Firefox */
-                    -webkit-animation: heart1  3s; /* Safari et Chrome */
-                }
-            }
-        }
-
+   
+.fa-empty:hover, .fa-white:hover{   
+    animation-delay: heart1  infinite 4s;
+    animation-name: heart1 infinite 4s;
+    -moz-animation: heart1 infinite 4s; /* Firefox */
+    -webkit-animation: heart1 infinite 4s; /* Safari et Chrome */
+}
     @keyframes heart1{
         from {
-            transform: scale(1);
+            opacity: 1;
         }
         to {
-            transform: scale(0); 
+            opacity: 0;
+            left: -99999px;
             
         }
     }
     @-moz-keyframes heart1{ /* sur Firefox */
         from {
-            transform: scale(1);
+            opacity: 1;
         }
         to {
-            transform: scale(0); 
+            opacity: 0;
+            left: -99999px;
             
         }
     }
     @-webkit-keyframes heart1{ /* sur Safari et Chrome */
         from {
-            transform: scale(1);
+            opacity: 1;
         }
         to {
-            transform: scale(0); 
+            opacity: 0;
+            left: -99999px;
             
         }
     }
     @-o-keyframes heart1{ /* sur Opera */
         from {
-            transform: scale(0);
+            opacity: 1;
         }
         to {
-            transform: scale(1); 
+            opacity: 0;
+            left: -99999px;
             
         }
     }
  
-.anim_heart_gradient{
-        display: inline-block;
-        font-size: 20px; 
-        position: absolute;
-        top : 25px;
-        right: 25px;
-        color: red;
-            i:active{
-                animation-delay: heart2 forwards 3s;
-                animation-name: heart2 forwards  3s;
-                -moz-animation: heart2 forwards 3s; /* Firefox */
-                -webkit-animation: heart2 forwards 3s; /* Safari et Chrome */
-                visibility: visible;
-                    &::before{
-                        visibility: visible;
-                        &:after{
-                            visibility: hidden;
-                        }
-                    }
-            }
-     }
-
-     @keyframes heart2{
-        from {
-            transform: scale(0);
-        }
-        to {
-            transform: scale(1); 
-            
-        }
-    }
-    @-moz-keyframes heart2{ /* sur Firefox */
-        from {
-            transform: scale(0);
-        }
-        to {
-            transform: scale(1); 
-            
-        }
-    }
-    @-webkit-keyframes heart2{ /* sur Safari et Chrome */
-        from {
-            transform: scale(0);
-        }
-        to {
-            transform: scale(1); 
-            
-        }
-    }
-    @-o-keyframes heart2{ /* sur Opera */
-        from {
-            transform: scale(0);
-        }
-        to {
-            transform: scale(1); 
-        }
-    }
 
 
 
@@ -464,59 +447,111 @@ h3{
                 border-bottom: solid $tertiary-color;         
     }
 }
- .menu_ent{
+ .ent_1{
+    animation-delay: appear 1s;
+    -moz-animation: appear 1s; /* Firefox */
+    -webkit-animation: appear 1s; /* Safari et Chrome */
+ }
+
+.ent_2{
+    animation-delay: appear 2s;
+    -moz-animation: appear 2s; /* Firefox */
+    -webkit-animation: appear 2s; /* Safari et Chrome */
+ }
+
+.ent_3{
     animation-delay: appear 3s;
     -moz-animation: appear 3s; /* Firefox */
     -webkit-animation: appear 3s; /* Safari et Chrome */
  }
 
- .menu_meal{
+.ent_4{
     animation-delay: appear 4s;
     -moz-animation: appear 4s; /* Firefox */
     -webkit-animation: appear 4s; /* Safari et Chrome */
- }
+ } 
 
- .menu_dessert{
+.meal_1{
     animation-delay: appear 5s;
     -moz-animation: appear 5s; /* Firefox */
     -webkit-animation: appear 5s; /* Safari et Chrome */
- }
+ } 
 
+.meal_2{
+    animation-delay: appear 6s;
+    -moz-animation: appear 6s; /* Firefox */
+    -webkit-animation: appear 6s; /* Safari et Chrome */
+ } 
+
+.meal_3{
+    animation-delay: appear 7s;
+    -moz-animation: appear 7s; /* Firefox */
+    -webkit-animation: appear 7s; /* Safari et Chrome */
+ } 
+
+.meal_4{
+    animation-delay: appear 8s;
+    -moz-animation: appear 8s; /* Firefox */
+    -webkit-animation: appear 8s; /* Safari et Chrome */
+ } 
+
+.dess_1{
+    animation-delay: appear 9s;
+    -moz-animation: appear 9s; /* Firefox */
+    -webkit-animation: appear 9s; /* Safari et Chrome */
+ } 
+
+.dess_2{
+    animation-delay: appear 10s;
+    -moz-animation: appear 10s; /* Firefox */
+    -webkit-animation: appear 10s; /* Safari et Chrome */
+ } 
+
+.dess_3{
+    animation-delay: appear 11s;
+    -moz-animation: appear 11s; /* Firefox */
+    -webkit-animation: appear 11s; /* Safari et Chrome */
+} 
+
+.dess_4{
+    animation-delay: appear 12s;
+    -moz-animation: appear 12s; /* Firefox */
+    -webkit-animation: appear 12s; /* Safari et Chrome */
+} 
 
 @keyframes appear {
     from {
-        transform: scale(0);    
+        opacity: 0;    
     }
     to {
-        transform: scale(1);
+        opacity: 1;
     }
 }
 @-moz-keyframes appear { /* sur Firefox */
     from {
-        transform: scale(0);
+        opacity: 0;    
     }
     to {
-        transform: scale(1);
+        opacity: 1;
     }
 }
 @-webkit-keyframes appear { /* sur Safari et Chrome */
     from {
-        transform: scale(0);
+        opacity: 0;    
     }
     to {
-        transform: scale(1);
+        opacity: 1;
     }
 }
 @-o-keyframes appear { /* sur Opera */
     from {
-        transform: scale(0);
+        opacity: 0;    
     }
     to {
-        transform: scale(1);
+        opacity: 1;
     }
 }
-
-/*---------------------FIN-----------------------*/
+/*-------------------------------------------------------*/
 
 .menu_dessert{
     padding-bottom: 0px;
@@ -525,6 +560,7 @@ h3{
 .ent_1, .ent_2, .ent_3, .ent_4, .meal_1,
 .meal_2, .meal_3, .dess_1, .dess_2, .dess_3{
     display: flex;
+    position: relative;
     flex-direction: column;
     background-color: white;
     border-style: hidden;
@@ -546,11 +582,7 @@ h3{
     font-size: 12px;
     margin-top: 0px;
     margin-bottom: 0px;
-        span{
-           align-self: baseline;
-           padding-top: 10px;
-           padding-right: 10px;
-        }
+        
             p{
                 padding-left: 10px;
             }
@@ -565,24 +597,145 @@ h3{
 
 .check{
     position: absolute;
-    display: none;
-    right: 15px;
+    display: block;
+    right: 0px;
+    top: 0px;
+    height: 66px;
     width: 15%;
-    height:40px;
     cursor: pointer;
     padding: 0px;
     background-size: cover;
+    opacity: 0;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     background-color: $tertiary-color;
+    animation-delay: underline 2s;
+    -moz-animation: underline 2s; /* Firefox */
+    -webkit-animation: underline 2s; /* Safari et Chrome */
+        &:hover{
+            opacity: 1;
+            transition: 0.5s ;
+        }
         i{
             display: flex;
-            font-size: 20px;
+            font-size: 35px;
             color: white;
             margin: auto;
+            padding-top: 15px;
             justify-content: center;
+            animation: rotate-check 1s;
+            animation-delay: rotate-check 1s;
+            -moz-animation: rotate-check 1s; /* Firefox */
+            -webkit-animation: rotate-check 1s; /* Safari et Chrome */
+                &:hover{
+                    animation: rotate-check 1s linear ;
+                    animation-iteration-count: 3; 
+                }            
         }
 }
+
+.rate{
+    position: relative;
+    padding-right: 10px;
+    animation: mouve left 3s;
+    animation-delay: mouve left 3s;
+    -moz-animation: mouve left 3s; /* Firefox */
+    -webkit-animation: mouve left 3s; /* Safari et Chrome */
+
+}
+@keyframes mouve {
+    from {
+        right: 0%;    
+    }
+    to {
+        right: 20%;
+    }
+}
+@-moz-keyframes mouve   { /* sur Firefox */
+    from {
+        right: 0%;    
+    }
+    to {
+        left: 20%;
+    }
+}
+@-webkit-keyframes mouve   { /* sur Safari et Chrome */
+    from {
+        right: 0%;    
+    }
+    to {
+        left: 20%;
+    }
+}
+
+@-o-keyframes mouve   { /* sur Opera */
+    from {
+        right: 0%;    
+    }
+    to {
+        left: 20%;
+    }
+}
+
+
+
+@keyframes underline {
+    from {
+        right: 0%;    
+    }
+    to {
+        left: 10%;
+    }
+}
+@-moz-keyframes underline  { /* sur Firefox */
+    from {
+        right: 0%;    
+    }
+    to {
+        left: 10%;
+    }
+}
+@-webkit-keyframes underline  { /* sur Safari et Chrome */
+    from {
+        right: 0%;    
+    }
+    to {
+        left: 10%;
+    }
+}
+
+@-o-keyframes underline  { /* sur Opera */
+    from {
+        right: 0%;    
+    }
+    to {
+        left: 10%;
+    }
+}
+
+@keyframes rotate-check {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+@-moz-keyframes rotate-check  { /* sur Firefox */
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate-check  { /* sur Safari et Chrome */
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+}
+
+@-o-keyframes rotate-check  { /* sur Opera */
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+}
+
+
+
+
+
 
 /*----- footer -----*/
 
