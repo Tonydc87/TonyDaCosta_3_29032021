@@ -62,7 +62,7 @@ body {
 .spinner:after {
   left: 50%;
   margin-left: -6em;
-  top: 40%;
+  top: 38%;
   z-index: 10002;
   content: "";
   position: absolute;
@@ -565,6 +565,7 @@ h3 {
 .meal_2, .meal_3, .dess_1, .dess_2, .dess_3 {
   display: flex;
   position: relative;
+  height: 60px;
   flex-direction: column;
   background-color: white;
   border-style: hidden;
@@ -581,17 +582,53 @@ h3 {
   padding: 10px 0px 0px 10px;
 }
 
+/*-----Animation prix-----*/
 .descript_rate {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   font-size: 12px;
   margin-top: 0px;
   margin-bottom: 0px;
+  cursor: pointer;
 }
 .descript_rate p {
-  padding-left: 10px;
+  margin: 10px 0px 10px 10px;
+  overflow: hidden;
+}
+.descript_rate:active {
+  animation: price 0.5s ease-in forwards;
+  -moz-animation: price 0.5s ease-in forwards;
+  -webkit-animation: price 0.5s ease-in forwards;
+  -ms-animation: price 0.5s ease-in forwards;
+  -o-animation: price 0.5s ease-in forwards;
+}
+@-webkit-keyframes price {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@-moz-keyframes price {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes price {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 80%;
+  }
 }
 
+/*------------------------*/
 .btn_buy {
   margin: 20px;
 }
@@ -599,85 +636,85 @@ h3 {
 /*-----Animation selection des plats-----*/
 .check {
   position: absolute;
-  display: inline-flex;
-  z-index: 10002;
+  display: flex;
   right: 0px;
   top: 0px;
-  height: 66px;
-  width: 20%;
-  content: "";
+  height: 60px;
+  width: 100%;
   cursor: pointer;
   padding: 0px;
-  opacity: 0.05;
+  opacity: 0;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   background-color: #99e2d0;
 }
-.check:hover {
-  animation: underline 0.5s;
-  animation-delay: underline 0.5s;
-  -moz-animation: underline 0.5s;
-  /* Firefox */
-  -webkit-animation: underline 0.5s;
-  /* Safari et Chrome */
+.check:active {
   opacity: 1;
+  transition: 0.5s;
+  -moz-animation: check 0.5s ease-in forwards;
+  -webkit-animation: check 0.5s ease-in forwards;
+  -ms-animation: check 0.5s ease-in forwards;
+  -o-animation: check 0.5s ease-in forwards;
+  animation: check 0.5s ease-in forwards;
 }
+@-webkit-keyframes check {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@-moz-keyframes check {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@keyframes check {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
 .check i {
   display: flex;
-  content: "";
   font-size: 35px;
-  width: 15%;
-  height: 66px;
   color: white;
   margin: auto;
-  padding-top: 15px;
-  justify-content: center;
+  cursor: pointer;
 }
-.check i:hover {
-  animation: spinner 1s linear;
+.check i:active {
+  -webkit-animation: seconds 1s forwards;
+  -webkit-animation-iteration-count: 1;
+  animation: seconds 1s forwards;
+  animation-iteration-count: 1;
+  box-sizing: border-box;
+  animation: checking 1s linear;
 }
 
+@keyframes checking {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .rate {
-  position: absolute;
-  right: 0px;
-  padding-right: 21%;
+  position: relative;
+  border-bottom-right-radius: 25px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  background: none;
 }
 
-@keyframes underline {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes underline {
-  /* sur Firefox */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes underline {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes underline {
-  /* sur Opera */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 /*----- footer -----*/
 footer {
   background-color: #353535;
@@ -717,6 +754,14 @@ footer li a {
 
 /*-----mediaQ-----*/
 @media screen and (min-width: 800px) {
+  .restau {
+    background-color: #353535;
+  }
+
+  .headerlogo {
+    background-color: #f6f6f6;
+  }
+
   h3 {
     text-align: center;
   }
@@ -738,10 +783,20 @@ footer li a {
   footer h3 {
     text-align: left;
   }
+
+  .menu_restaurant {
+    left: 12.5%;
+    width: 75%;
+  }
+
+  .ent_1, .ent_2, .ent_3, .ent_4, .meal_1,
+.meal_2, .meal_3, .dess_1, .dess_2, .dess_3 {
+    width: 60%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .new1, .new2, .serie1, .serie2 {
-    width: 80%;
+    width: 70%;
     height: 250px;
     margin: 10px;
   }
