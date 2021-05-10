@@ -302,7 +302,9 @@ h3{
     bottom: 10px;
     font-size: 17px;
     cursor: pointer;
-    color: red;
+    background: linear-gradient(to bottom, $secondary-color, $primary-color);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
     z-index: 10001;
     background-size: cover;    
 }
@@ -318,7 +320,7 @@ h3{
     top: 20px;
     left: 15px; 
     color: black;
-    border-style: solid black ;
+    border-style: hidden ;
 }
 
 .intro_img{
@@ -356,7 +358,9 @@ h3{
     bottom: 0px;
     font-size: 17px;
     cursor: pointer;
-    color: red;
+    background: linear-gradient(to bottom, $secondary-color, $primary-color);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
     z-index: 10001;
     background-size: cover;    
 }
@@ -381,8 +385,8 @@ h3{
 
    
 .fa-empty:hover, .fa-white:hover{   
-    animation-delay: heart1  infinite 4s;
-    animation-name: heart1 infinite 4s;
+    animation-delay: 4s;
+    animation-name: heart1 ;
     -moz-animation: heart1 infinite 4s; /* Firefox */
     -webkit-animation: heart1 infinite 4s; /* Safari et Chrome */
 }
@@ -444,83 +448,95 @@ h3{
                 margin-left: 20px;
                 padding-bottom: 10px;
                 width: fit-content;
-                border-bottom: solid $tertiary-color;         
+                border-bottom: solid $tertiary-color; 
+                text-overflow: ellipsis;        
     }
 }
  .ent_1{
-    animation: underline;
-    animation-delay: appear 1s;
-    -moz-animation: appear 1s; /* Firefox */
-    -webkit-animation: appear 1s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay:   1s;
+    -moz-animation: cascade_effect 1s; /* Firefox */
+    -webkit-animation: cascade_effect 1s; /* Safari et Chrome */
  }
 
 .ent_2{
-    animation-delay: appear 2s;
-    -moz-animation: appear 2s; /* Firefox */
-    -webkit-animation: appear 2s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay:  2s;
+    -moz-animation:cascade_effect 2s; /* Firefox */
+    -webkit-animation: cascade_effect 2s; /* Safari et Chrome */
  }
 
 .ent_3{
-    animation-delay: appear 3s;
-    -moz-animation: appear 3s; /* Firefox */
-    -webkit-animation: appear 3s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay: 3s;
+    -moz-animation:cascade_effect 3s; /* Firefox */
+    -webkit-animation:cascade_effect 3s; /* Safari et Chrome */
  }
 
 .ent_4{
-    animation-delay: appear 4s;
-    -moz-animation: appear 4s; /* Firefox */
-    -webkit-animation: appear 4s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay:  4s;
+    -moz-animation: cascade_effect 4s; /* Firefox */
+    -webkit-animation: cascade_effect 4s; /* Safari et Chrome */
  } 
 
 .meal_1{
-    animation-delay: appear 5s;
-    -moz-animation: appear 5s; /* Firefox */
-    -webkit-animation: appear 5s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay:  5s;
+    -moz-animation: cascade_effect 5s; /* Firefox */
+    -webkit-animation: cascade_effect 5s; /* Safari et Chrome */
  } 
 
 .meal_2{
-    animation-delay: appear 6s;
-    -moz-animation: appear 6s; /* Firefox */
-    -webkit-animation: appear 6s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay:  6s;
+    -moz-animation: cascade_effect 6s; /* Firefox */
+    -webkit-animation: cascade_effect 6s; /* Safari et Chrome */
  } 
 
 .meal_3{
-    animation-delay: appear 7s;
-    -moz-animation: appear 7s; /* Firefox */
-    -webkit-animation: appear 7s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay:  7s;
+    -moz-animation: cascade_effect 7s; /* Firefox */
+    -webkit-animation: cascade_effect 7s; /* Safari et Chrome */
  } 
 
 .meal_4{
-    animation-delay: appear 8s;
-    -moz-animation: appear 8s; /* Firefox */
-    -webkit-animation: appear 8s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay: 8s;
+    -moz-animation: cascade_effect 8s; /* Firefox */
+    -webkit-animation: cascade_effect 8s; /* Safari et Chrome */
  } 
 
 .dess_1{
-    animation-delay: appear 9s;
-    -moz-animation: appear 9s; /* Firefox */
-    -webkit-animation: appear 9s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay: 9s;
+    -moz-animation: cascade_effect 9s; /* Firefox */
+    -webkit-animation: cascade_effect 9s; /* Safari et Chrome */
  } 
 
 .dess_2{
-    animation-delay: appear 10s;
-    -moz-animation: appear 10s; /* Firefox */
-    -webkit-animation: appear 10s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay:  10s;
+    -moz-animation: cascade_effect 10s; /* Firefox */
+    -webkit-animation: cascade_effect 10s; /* Safari et Chrome */
  } 
 
 .dess_3{
-    animation-delay: appear 11s;
-    -moz-animation: appear 11s; /* Firefox */
-    -webkit-animation: appear 11s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay:  11s;
+    -moz-animation: cascade_effect 11s; /* Firefox */
+    -webkit-animation: cascade_effect 11s; /* Safari et Chrome */
 } 
 
 .dess_4{
-    animation-delay: appear 12s;
-    -moz-animation: appear 12s; /* Firefox */
-    -webkit-animation: appear 12s; /* Safari et Chrome */
+    animation-name: cascade_effect;
+    animation-delay: 12s;
+    -moz-animation: cascade_effect 12s; /* Firefox */
+    -webkit-animation: cascade_effect 12s; /* Safari et Chrome */
 } 
 
-@keyframes appear {
+@keyframes cascade_effect{
     from {
         opacity: 0;    
     }
@@ -528,7 +544,7 @@ h3{
         opacity: 1;
     }
 }
-@-moz-keyframes appear { /* sur Firefox */
+@-moz-keyframes cascade_effect { /* sur Firefox */
     from {
         opacity: 0;    
     }
@@ -536,7 +552,7 @@ h3{
         opacity: 1;
     }
 }
-@-webkit-keyframes appear { /* sur Safari et Chrome */
+@-webkit-keyframes cascade_effect{ /* sur Safari et Chrome */
     from {
         opacity: 0;    
     }
@@ -544,7 +560,7 @@ h3{
         opacity: 1;
     }
 }
-@-o-keyframes appear { /* sur Opera */
+@-o-keyframes cascade_effect{ /* sur Opera */
     from {
         opacity: 0;    
     }
@@ -570,11 +586,17 @@ h3{
     box-shadow: $box-shadow;
     margin: 10px auto;
     width: 90%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     h3{
-        width: fit-content;
         font-size: 15px;
         margin: 0px;
         padding: 10px 0px 0px 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis; 
+    }
+    .descript_rate:hover{
+        
     }
 }
 
@@ -582,7 +604,6 @@ h3{
 
 .descript_rate{
     display: flex;
-   
     justify-content: space-between;
     align-items: baseline;
     font-size: 12px;
@@ -591,9 +612,11 @@ h3{
     cursor: pointer;
             p{
                 margin: 10px 0px 10px 10px;
-                overflow: hidden; 
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;  
             }
-            &:active{
+            &:hover{
                 animation: price 0.5s ease-in forwards;
                 -moz-animation: price 0.5s ease-in forwards;
                 -webkit-animation: price 0.5s ease-in forwards ;
@@ -616,6 +639,7 @@ h3{
 
 }
 
+
 /*------------------------*/
 
 .btn_buy{
@@ -637,7 +661,7 @@ h3{
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     background-color: $tertiary-color;
-        &:active{
+        &:hover{
             opacity: 1;
             transition: 0.5s;
             -moz-animation: check 0.5s ease-in forwards;
@@ -646,6 +670,7 @@ h3{
             -o-animation: check 0.5s ease-in forwards;
             animation: check 0.5s ease-in forwards;
         }
+        
         @-webkit-keyframes check {
             0% {width:0%}
             100% {width:20%;}
@@ -666,7 +691,7 @@ h3{
     color: white;
     margin: auto;
     cursor: pointer;
-        &:active{  
+        &:hover{  
             -webkit-animation: seconds 1.0s forwards;
             -webkit-animation-iteration-count: 1;
             animation: seconds 1.0s forwards;
@@ -738,9 +763,7 @@ footer{
     .headerlogo{
         background-color:#f6f6f6;
     }
-    h3{
-        text-align: center;
-    }
+    
 
     .step{
         width: 50%;
