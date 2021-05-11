@@ -453,6 +453,7 @@ h3{
     }
 }
  .ent_1{
+    
     animation-name: cascade_effect;
     animation-delay:   1s;
     -moz-animation: cascade_effect 1s; /* Firefox */
@@ -461,118 +462,126 @@ h3{
 
 .ent_2{
     animation-name: cascade_effect;
-    animation-delay:  2s;
-    -moz-animation:cascade_effect 2s; /* Firefox */
-    -webkit-animation: cascade_effect 2s; /* Safari et Chrome */
+    animation-delay:  1.5s;
+    -moz-animation:cascade_effect 1.5s; /* Firefox */
+    -webkit-animation: cascade_effect 1.5s; /* Safari et Chrome */
  }
 
 .ent_3{
     animation-name: cascade_effect;
-    animation-delay: 3s;
-    -moz-animation:cascade_effect 3s; /* Firefox */
-    -webkit-animation:cascade_effect 3s; /* Safari et Chrome */
+    animation-delay: 2s;
+    -moz-animation:cascade_effect 2s; /* Firefox */
+    -webkit-animation:cascade_effect 2s; /* Safari et Chrome */
  }
 
 .ent_4{
+    animation-name: cascade_effect;
+    animation-delay:  2.5s;
+    -moz-animation: cascade_effect 2.5s; /* Firefox */
+    -webkit-animation: cascade_effect 2.5s; /* Safari et Chrome */
+ } 
+
+.meal_1{
+    animation-name: cascade_effect;
+    animation-delay:  3s;
+    -moz-animation: cascade_effect 3s; /* Firefox */
+    -webkit-animation: cascade_effect 3s; /* Safari et Chrome */
+ } 
+
+.meal_2{
+    animation-name: cascade_effect;
+    animation-delay:  3.5s;
+    -moz-animation: cascade_effect 3.5s; /* Firefox */
+    -webkit-animation: cascade_effect 3.5s; /* Safari et Chrome */
+ } 
+
+.meal_3{
     animation-name: cascade_effect;
     animation-delay:  4s;
     -moz-animation: cascade_effect 4s; /* Firefox */
     -webkit-animation: cascade_effect 4s; /* Safari et Chrome */
  } 
 
-.meal_1{
-    animation-name: cascade_effect;
-    animation-delay:  5s;
-    -moz-animation: cascade_effect 5s; /* Firefox */
-    -webkit-animation: cascade_effect 5s; /* Safari et Chrome */
- } 
-
-.meal_2{
-    animation-name: cascade_effect;
-    animation-delay:  6s;
-    -moz-animation: cascade_effect 6s; /* Firefox */
-    -webkit-animation: cascade_effect 6s; /* Safari et Chrome */
- } 
-
-.meal_3{
-    animation-name: cascade_effect;
-    animation-delay:  7s;
-    -moz-animation: cascade_effect 7s; /* Firefox */
-    -webkit-animation: cascade_effect 7s; /* Safari et Chrome */
- } 
-
 .meal_4{
     animation-name: cascade_effect;
-    animation-delay: 8s;
-    -moz-animation: cascade_effect 8s; /* Firefox */
-    -webkit-animation: cascade_effect 8s; /* Safari et Chrome */
+    animation-delay: 4.5s;
+    -moz-animation: cascade_effect 4.5s; /* Firefox */
+    -webkit-animation: cascade_effect 4.5s; /* Safari et Chrome */
  } 
 
 .dess_1{
     animation-name: cascade_effect;
-    animation-delay: 9s;
-    -moz-animation: cascade_effect 9s; /* Firefox */
-    -webkit-animation: cascade_effect 9s; /* Safari et Chrome */
+    animation-delay: 5s;
+    -moz-animation: cascade_effect 5s; /* Firefox */
+    -webkit-animation: cascade_effect 5s; /* Safari et Chrome */
  } 
 
 .dess_2{
     animation-name: cascade_effect;
-    animation-delay:  10s;
-    -moz-animation: cascade_effect 10s; /* Firefox */
-    -webkit-animation: cascade_effect 10s; /* Safari et Chrome */
+    animation-delay:  5.5s;
+    -moz-animation: cascade_effect 5.5s; /* Firefox */
+    -webkit-animation: cascade_effect 5.5s; /* Safari et Chrome */
  } 
 
 .dess_3{
     animation-name: cascade_effect;
-    animation-delay:  11s;
-    -moz-animation: cascade_effect 11s; /* Firefox */
-    -webkit-animation: cascade_effect 11s; /* Safari et Chrome */
+    animation-delay: 6s;
+    -moz-animation: cascade_effect 6s; /* Firefox */
+    -webkit-animation: cascade_effect 6s; /* Safari et Chrome */
 } 
 
 .dess_4{
     animation-name: cascade_effect;
-    animation-delay: 12s;
-    -moz-animation: cascade_effect 12s; /* Firefox */
-    -webkit-animation: cascade_effect 12s; /* Safari et Chrome */
+    animation-delay: 6.5s;
+    -moz-animation: cascade_effect 6.5s; /* Firefox */
+    -webkit-animation: cascade_effect 6.5s; /* Safari et Chrome */
 } 
 
 @keyframes cascade_effect{
     from {
-        opacity: 0;    
+        transform: scaleY(0);
+        opacity: 0;
+           
     }
     to {
+        transform: scaleY(1);
         opacity: 1;
     }
 }
 @-moz-keyframes cascade_effect { /* sur Firefox */
     from {
-        opacity: 0;    
+        transform: scaleY(0);
+        opacity: 0;
+           
     }
     to {
+        transform: scaleY(1);
         opacity: 1;
     }
 }
 @-webkit-keyframes cascade_effect{ /* sur Safari et Chrome */
     from {
-        opacity: 0;    
+        transform: scaleY(0);
+        opacity: 0;
+           
     }
     to {
+        transform: scaleY(1);
         opacity: 1;
     }
 }
 @-o-keyframes cascade_effect{ /* sur Opera */
     from {
-        opacity: 0;    
+        transform: scaleY(0);
+        opacity: 0;
+           
     }
     to {
+        transform: scaleY(1);
         opacity: 1;
     }
 }
 /*-------------------------------------------------------*/
-
-.menu_dessert{
-    padding-bottom: 0px;
-}
 
 .ent_1, .ent_2, .ent_3, .ent_4, .meal_1,
 .meal_2, .meal_3, .dess_1, .dess_2, .dess_3{
@@ -586,6 +595,7 @@ h3{
     box-shadow: $box-shadow;
     margin: 10px auto;
     width: 90%;
+    cursor: pointer;
     white-space: nowrap;
     text-overflow: ellipsis;
     h3{
@@ -595,12 +605,7 @@ h3{
         white-space: nowrap;
         text-overflow: ellipsis; 
     }
-    .descript_rate:hover{
-        
-    }
 }
-
-/*-----Animation prix-----*/
 
 .descript_rate{
     display: flex;
@@ -616,104 +621,115 @@ h3{
                 white-space: nowrap;
                 text-overflow: ellipsis;  
             }
-            &:hover{
-                animation: price 0.5s ease-in forwards;
-                -moz-animation: price 0.5s ease-in forwards;
-                -webkit-animation: price 0.5s ease-in forwards ;
-                -ms-animation: price 0.5s ease-in forwards ;
-                -o-animation: price 0.5s ease-in forwards;
-        
-            @-webkit-keyframes price {
-                0% {width:100%}
-                100% {width: 80%;} 
-            }
-            @-moz-keyframes price {
-                0% {width:100%}
-                100% {width:80%;}
-            }
-            @keyframes price {
-                0% {width:100%}
-                100% {width:80%;}
-            }
-        }
-
+                .rate{
+                    position: relative;
+                    border-bottom-right-radius: 25px;
+                    margin-right: 10px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    background: none;
+                }
+                    .check{
+                        position: absolute;
+                        display: flex;
+                        right: 0px;
+                        top: 0px;
+                        height: 60px;
+                        width: 100%;
+                        cursor: pointer;
+                        padding: 0px;
+                        opacity: 0;
+                        border-top-right-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                        background-color: $tertiary-color;
+                    }
+                            .check i{
+                                display: flex;
+                                font-size: 35px;
+                                color: white;
+                                margin: auto;
+                                cursor: pointer;
+                    }
+    
 }
-
-
-/*------------------------*/
 
 .btn_buy{
     margin: 20px;
 }
 
-/*-----Animation selection des plats-----*/
+.menu_dessert{
+    padding-bottom: 0px;
+}
 
- .check{
-    position: absolute;
-    display: flex;
-    right: 0px;
-    top: 0px;
-    height: 60px;
-    width: 100%;
-    cursor: pointer;
-    padding: 0px;
-    opacity: 0;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background-color: $tertiary-color;
-        &:hover{
-            opacity: 1;
-            transition: 0.5s;
-            -moz-animation: check 0.5s ease-in forwards;
-            -webkit-animation: check 0.5s ease-in forwards;
-            -ms-animation: check 0.5s ease-in forwards;
-            -o-animation: check 0.5s ease-in forwards;
-            animation: check 0.5s ease-in forwards;
-        }
+/*----- Animations selections des plats -----*/
+
+.ent_1:hover .rate, .ent_2:hover .rate, .ent_3:hover .rate,
+.ent_4:hover .rate, .meal_1:hover .rate, .meal_2:hover .rate,
+.meal_3:hover .rate, .meal_4:hover .rate, .dess_1:hover .rate,
+.dess_2:hover .rate, .dess_3:hover .rate, .dess_4:hover .rate{
+    animation: price 0.5s ease-in forwards;
+    -moz-animation: price 0.5s ease-in forwards;
+    -webkit-animation: price 0.5s ease-in forwards ;
+    -ms-animation: price 0.5s ease-in forwards ;
+    -o-animation: price 0.5s ease-in forwards;
         
-        @-webkit-keyframes check {
+        @-webkit-keyframes price {
             0% {width:0%}
-            100% {width:20%;}
+            100% {width: 25%;} 
         }
-        @-moz-keyframes check {
+        @-moz-keyframes price {
             0% {width:0%}
-            100% {width:20%;}
+            100% {width:25%;}
         }
-        @keyframes check {
+        @keyframes price {
             0% {width:0%}
-            100% {width:20%;}
-        }   
+            100% {width:25%;}
+        }
+    }
+
+.ent_1:hover .check, .ent_2:hover .check, .ent_3:hover .check,
+.ent_4:hover .check, .meal_1:hover .check, .meal_2:hover .check,
+.meal_3:hover .check, .meal_4:hover .check, .dess_1:hover .check,
+.dess_2:hover .check, .dess_3:hover .check, .dess_4:hover .check{
+    opacity: 1;
+    transition: 0.5s;
+    -moz-animation: check 0.5s ease-in forwards;
+    -webkit-animation: check 0.5s ease-in forwards;
+    -ms-animation: check 0.5s ease-in forwards;
+    -o-animation: check 0.5s ease-in forwards;
+     animation: check 0.5s ease-in forwards;
+
+    @-webkit-keyframes check {
+        0% {width:0%}
+        100% {width:20%;}
+    }
+    @-moz-keyframes check {
+        0% {width:0%}
+        100% {width:20%;}
+    }
+    @keyframes check {
+        0% {width:0%}
+        100% {width:20%;}
+    }
+} 
+
+.ent_1:hover .check i, .ent_2:hover .check i, .ent_3:hover .check i,
+.ent_4:hover .check i, .meal_1:hover .check i, .meal_2:hover .check i,
+.meal_3:hover .check i, .meal_4:hover .check i, .dess_1:hover .check i,
+.dess_2:hover .check i, .dess_3:hover .check i, .dess_4:hover .check i{
+    -webkit-animation: seconds 1.0s forwards;
+    -webkit-animation-iteration-count: 1;
+    animation: seconds 1.0s forwards;
+    animation-iteration-count: 1;
+    box-sizing: border-box;
+    animation: checking 1s linear ;
+     
+    @keyframes checking {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
 }
 
-.check i{
-    display: flex;
-    font-size: 35px;
-    color: white;
-    margin: auto;
-    cursor: pointer;
-        &:hover{  
-            -webkit-animation: seconds 1.0s forwards;
-            -webkit-animation-iteration-count: 1;
-            animation: seconds 1.0s forwards;
-            animation-iteration-count: 1;
-            box-sizing: border-box;
-            animation: checking 1s linear ;
-        } 
-    }  
-        @keyframes checking {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-
-.rate{
-    position: relative;
-    border-bottom-right-radius: 25px;
-    margin-right: 10px;
-    font-weight: bold;
-    font-size: 14px;
-    background: none;
-}
 
 /*----- footer -----*/
 
