@@ -1,0 +1,29 @@
+Présentation projet 3 : 
+
+Oh my food 
+
+Bonjour, je vous présente aujourd'hui le site Ohmyfood, 
+
+Comme indiqué dans le brief, nous devions developper un site proposant le menu de 4 grands restaurant parisiens et permettant aux utilisateurs de composer leur menu en ligne et de les reserver. 
+
+Le developpement a été résalisé en CSS sans utiliser de javascript, aucun framework n'aura été utilisé et aucun code CSS n'est présent dans le fichier html. 
+
+Pour réaliser ce projet j'ai en revanche pu utiliser le préprocesseur SASS qui a été une réelle découverte pour moi. J'ai trouvé cet outil très intéressant à utiliser, il permet en effet d'organiser son code CSS de manière plus ordonné, il permet d'éviter les répétions et d'avoir un code plus simple à lire. A l'image du code HTML le preprocesseur sass permet d'imbriquer des éléments enfants directement dans un élément parent et enfin il compile tout ces éléments dans un fichier css lu par les navigateurs. 
+
+Le site contient, une page d'accueil ainsi que 4 pages dédiés aux restaurants. Je vous propose de les découvrir ensemble. 
+
+La page d'accueil contient un loader qui s'affiche en entrée de site et disparait au bout de quelques seconde, les polices utilisées sont Shrikhand et Roboto, nous voyons ici un emplacement indiquant la localisation des restaurant,
+deux titre, un bouton avec la couleur dégradé attendu qui s'éclaircis au passage de la souris, j'ai utilisé ici une transition et un léger changement d'opacité au survol, un menu explicatif indiquant les différentes étapes de reservation dans lequel j'ai également appliqué un effet de transition et un changement de couleur. Une section avec les différents restaurants disponible. Ces vignettes contienne pour les deux première un petit bouton nouveau en position absolu dans les deux première vignette. Nous voyons une photo du restaurant, son nom et son emplacement dans la ville. une animation est réalisé sur le coeur pour que celui change d'état, pour cela j'ai superposé deux coeur un plein et un vide, j'ai appliqués aux coeurs pleins la couleur dégradé que nous voyons sur les boutons présent dans le site.
+Nous trouvons en bas de page le footer dans lequel l'onglet contact redirige directement l'utilisateur vers sa boite mail pour qu'il puisse nous contacter très simplement. 
+
+Chaque vignette est clicable et dirige l'utilisateur vers le menu du restaurant. Voici une pages de menu, nous retrouvons en haut de page le logo ohmyfood, une photo, le nom du restaurant le menu un bouton et le footer commun à toutes les pages. Le menu s'affiche en cascade avec un effet de transition décalé pour chaque plat présent. Nous retrouvons également le coeur qui change d'état au passage de la souris. Lorsque l'utilisateur validera sont plat une animation sera visible sur chaque plat, un check de droite à gauche, le prix se décale à gauche en suivant le même chemin et enfin dans ce check un élément de validation tournant de 0 à 360°. Enfin en bas de page un bouton permettant de valider la commande auprès du restaurant.
+
+Je vous présenter maintenant le code réalisé et je vais détaillé les animations
+
+Le loader : Afin que celui apparaisse et disparaisse j'ai utilisé une propriété Z-index 9999999 afin que celle soit comme caché derrière les autre éléments du site. ce loader contient donc un titre h1 et un spinner tournant autour de lui. sur le code nous voyons que le spinner est position fixe en 
+
+ 
+
+
+
+ 

@@ -211,6 +211,8 @@ h3{
  }
 
  .step i{
+     position: absolute;
+     width: 65%;
      padding: 22px 10px 20px 0px;
      margin-left: 20px;
      color: rgb(112, 111, 111);
@@ -218,6 +220,7 @@ h3{
             color: $primary-color;
         }
  }
+
 
  .step span{
      font-size: 12px;
@@ -385,7 +388,7 @@ h3{
 
    
 .fa-empty:hover, .fa-white:hover{   
-    animation-delay: 4s;
+    animation-delay: 10s;
     animation-name: heart1 ;
     -moz-animation: heart1 infinite 4s; /* Firefox */
     -webkit-animation: heart1 infinite 4s; /* Safari et Chrome */
@@ -447,9 +450,9 @@ h3{
                 font-size: 15px;
                 margin-left: 20px;
                 padding-bottom: 10px;
-                width: fit-content;
+                width: min-content;
                 border-bottom: solid $tertiary-color; 
-                text-overflow: ellipsis;        
+                       
     }
 }
  .ent_1{
@@ -675,15 +678,15 @@ h3{
         
         @-webkit-keyframes price {
             0% {width:0%}
-            100% {width: 25%;} 
+            100% {width: 30%;} 
         }
         @-moz-keyframes price {
             0% {width:0%}
-            100% {width:25%;}
+            100% {width:30%;}
         }
         @keyframes price {
             0% {width:0%}
-            100% {width:25%;}
+            100% {width:30%;}
         }
     }
 
@@ -770,6 +773,16 @@ footer{
 
 
 /*-----mediaQ-----*/
+
+@media screen and (min-width: 580px){
+.new1, .new2, .serie1, .serie2{
+    width: 90%;
+    height: 250px;
+        img{
+            height: 200px;
+        }
+}
+}
 
 @media screen and (min-width: 800px){
     .restau{

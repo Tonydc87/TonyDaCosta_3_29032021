@@ -202,6 +202,8 @@ h3 {
 }
 
 .step i {
+  position: absolute;
+  width: 65%;
   padding: 22px 10px 20px 0px;
   margin-left: 20px;
   color: #706f6f;
@@ -367,7 +369,7 @@ h3 {
 
 /*----- animation remplissage du coeur -----*/
 .fa-empty:hover, .fa-white:hover {
-  animation-delay: 4s;
+  animation-delay: 10s;
   animation-name: heart1;
   -moz-animation: heart1 infinite 4s;
   /* Firefox */
@@ -424,9 +426,8 @@ h3 {
   font-size: 15px;
   margin-left: 20px;
   padding-bottom: 10px;
-  width: fit-content;
+  width: min-content;
   border-bottom: solid #99e2d0;
-  text-overflow: ellipsis;
 }
 
 .ent_1 {
@@ -675,7 +676,7 @@ h3 {
     width: 0%;
   }
   100% {
-    width: 25%;
+    width: 30%;
   }
 }
 @-moz-keyframes price {
@@ -683,7 +684,7 @@ h3 {
     width: 0%;
   }
   100% {
-    width: 25%;
+    width: 30%;
   }
 }
 @keyframes price {
@@ -691,7 +692,7 @@ h3 {
     width: 0%;
   }
   100% {
-    width: 25%;
+    width: 30%;
   }
 }
 
@@ -790,6 +791,15 @@ footer li a {
 }
 
 /*-----mediaQ-----*/
+@media screen and (min-width: 580px) {
+  .new1, .new2, .serie1, .serie2 {
+    width: 90%;
+    height: 250px;
+  }
+  .new1 img, .new2 img, .serie1 img, .serie2 img {
+    height: 200px;
+  }
+}
 @media screen and (min-width: 800px) {
   .restau {
     background-color: #353535;
