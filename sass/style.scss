@@ -465,122 +465,114 @@ h3{
 
 .ent_2{
     animation-name: cascade_effect;
-    animation-delay:  1.5s;
-    -moz-animation:cascade_effect 1.5s; /* Firefox */
-    -webkit-animation: cascade_effect 1.5s; /* Safari et Chrome */
+    animation-delay:  2s;
+    -moz-animation:cascade_effect 2s; /* Firefox */
+    -webkit-animation: cascade_effect 2s; /* Safari et Chrome */
  }
 
 .ent_3{
     animation-name: cascade_effect;
-    animation-delay: 2s;
-    -moz-animation:cascade_effect 2s; /* Firefox */
-    -webkit-animation:cascade_effect 2s; /* Safari et Chrome */
+    animation-delay: 3s;
+    -moz-animation:cascade_effect 3s; /* Firefox */
+    -webkit-animation:cascade_effect 3s; /* Safari et Chrome */
  }
 
 .ent_4{
-    animation-name: cascade_effect;
-    animation-delay:  2.5s;
-    -moz-animation: cascade_effect 2.5s; /* Firefox */
-    -webkit-animation: cascade_effect 2.5s; /* Safari et Chrome */
- } 
-
-.meal_1{
-    animation-name: cascade_effect;
-    animation-delay:  3s;
-    -moz-animation: cascade_effect 3s; /* Firefox */
-    -webkit-animation: cascade_effect 3s; /* Safari et Chrome */
- } 
-
-.meal_2{
-    animation-name: cascade_effect;
-    animation-delay:  3.5s;
-    -moz-animation: cascade_effect 3.5s; /* Firefox */
-    -webkit-animation: cascade_effect 3.5s; /* Safari et Chrome */
- } 
-
-.meal_3{
     animation-name: cascade_effect;
     animation-delay:  4s;
     -moz-animation: cascade_effect 4s; /* Firefox */
     -webkit-animation: cascade_effect 4s; /* Safari et Chrome */
  } 
 
-.meal_4{
+.meal_1{
     animation-name: cascade_effect;
-    animation-delay: 4.5s;
+    animation-delay:  4.5s;
     -moz-animation: cascade_effect 4.5s; /* Firefox */
     -webkit-animation: cascade_effect 4.5s; /* Safari et Chrome */
  } 
 
-.dess_1{
+.meal_2{
     animation-name: cascade_effect;
-    animation-delay: 5s;
+    animation-delay:  5s;
     -moz-animation: cascade_effect 5s; /* Firefox */
     -webkit-animation: cascade_effect 5s; /* Safari et Chrome */
  } 
 
-.dess_2{
+.meal_3{
     animation-name: cascade_effect;
     animation-delay:  5.5s;
     -moz-animation: cascade_effect 5.5s; /* Firefox */
     -webkit-animation: cascade_effect 5.5s; /* Safari et Chrome */
  } 
 
-.dess_3{
+.meal_4{
     animation-name: cascade_effect;
     animation-delay: 6s;
     -moz-animation: cascade_effect 6s; /* Firefox */
     -webkit-animation: cascade_effect 6s; /* Safari et Chrome */
-} 
+ } 
 
-.dess_4{
+.dess_1{
     animation-name: cascade_effect;
     animation-delay: 6.5s;
     -moz-animation: cascade_effect 6.5s; /* Firefox */
     -webkit-animation: cascade_effect 6.5s; /* Safari et Chrome */
+ } 
+
+.dess_2{
+    animation-name: cascade_effect;
+    animation-delay: 7s;
+    -moz-animation: cascade_effect 7s; /* Firefox */
+    -webkit-animation: cascade_effect 7s; /* Safari et Chrome */
+ } 
+
+.dess_3{
+    animation-name: cascade_effect;
+    animation-delay: 7.5s;
+    -moz-animation: cascade_effect 7.5s; /* Firefox */
+    -webkit-animation: cascade_effect 7.5s; /* Safari et Chrome */
+} 
+
+.dess_4{
+    animation-name: cascade_effect;
+    animation-delay: 8s;
+    -moz-animation: cascade_effect 8s; /* Firefox */
+    -webkit-animation: cascade_effect 8s; /* Safari et Chrome */
 } 
 
 @keyframes cascade_effect{
     from {
-        transform: scaleY(0);
         opacity: 0;
            
     }
     to {
-        transform: scaleY(1);
         opacity: 1;
     }
 }
 @-moz-keyframes cascade_effect { /* sur Firefox */
     from {
-        transform: scaleY(0);
         opacity: 0;
            
     }
     to {
-        transform: scaleY(1);
         opacity: 1;
     }
 }
 @-webkit-keyframes cascade_effect{ /* sur Safari et Chrome */
     from {
-        transform: scaleY(0);
         opacity: 0;
            
     }
     to {
-        transform: scaleY(1);
         opacity: 1;
     }
 }
 @-o-keyframes cascade_effect{ /* sur Opera */
     from {
-        transform: scaleY(0);
         opacity: 0;
            
     }
     to {
-        transform: scaleY(1);
         opacity: 1;
     }
 }
