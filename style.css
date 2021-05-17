@@ -653,7 +653,7 @@ h3 {
 }
 
 /*----- Animations selections des plats -----*/
-.ent_1:hover:active .rate, .ent_2:hover .rate, .ent_3:hover .rate,
+.ent_1:hover .rate, .ent_2:hover .rate, .ent_3:hover .rate,
 .ent_4:hover .rate, .meal_1:hover .rate, .meal_2:hover .rate,
 .meal_3:hover .rate, .meal_4:hover .rate, .dess_1:hover .rate,
 .dess_2:hover .rate, .dess_3:hover .rate, .dess_4:hover .rate {
@@ -688,7 +688,7 @@ h3 {
   }
 }
 
-.ent_1:hover:active .check, .ent_2:hover .check, .ent_3:hover .check,
+.ent_1:hover .check, .ent_2:hover .check, .ent_3:hover .check,
 .ent_4:hover .check, .meal_1:hover .check, .meal_2:hover .check,
 .meal_3:hover .check, .meal_4:hover .check, .dess_1:hover .check,
 .dess_2:hover .check, .dess_3:hover .check, .dess_4:hover .check {
@@ -725,7 +725,7 @@ h3 {
   }
 }
 
-.ent_1:hover:active .check i, .ent_2:hover .check i, .ent_3:hover .check i,
+.ent_1:hover .check i, .ent_2:hover .check i, .ent_3:hover .check i,
 .ent_4:hover .check i, .meal_1:hover .check i, .meal_2:hover .check i,
 .meal_3:hover .check i, .meal_4:hover .check i, .dess_1:hover .check i,
 .dess_2:hover .check i, .dess_3:hover .check i, .dess_4:hover .check i {
